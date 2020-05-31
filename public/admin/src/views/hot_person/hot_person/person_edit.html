@@ -1,0 +1,157 @@
+<div class="layui-form" lay-filter="news-index-edit" style="padding: 20px 30px 0 0;">
+
+    <script type="text/html" template>
+        <input type="hidden" name="p_id" value="{{ d.params.p_id || '' }}"  placeholder="id" autocomplete="off" class="layui-input">
+    </script>
+    <div class="layui-form-item">
+        <label class="layui-form-label">名字</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="p_name" lay-verify="required" value="{{ d.params.p_name || '' }}"  placeholder="输入名字" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">描述</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="desc" lay-verify="required" value="{{ d.params.desc || '' }}"  placeholder="描述" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">个性签名</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="sign" lay-verify="required" value="{{ d.params.sign || '' }}"  placeholder="个性签名" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">权重</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="p_weight" lay-verify="required" value="{{ d.params.p_weight || '' }}"  placeholder="权重" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">热度</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="hot_click" lay-verify="required" value="{{ d.params.hot_click || '' }}"  placeholder="权重" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">粉丝数</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="fans" lay-verify="required" value="{{ d.params.fans || '' }}"  placeholder="粉丝数" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+
+    <div class="layui-col-md4">
+        <div class="layui-form-item">
+            <label class="layui-form-label">性别</label>
+            <div class="layui-input-block">
+                <script type="text/html" template lay-done="layui.data.gamelistdone(d);">
+                    <input type="radio" name="sex" value="male" title="男" {{# if(d.params.sex == "male"){ }}checked{{# } }}>
+                    <input type="radio" name="sex" value="female" title="女" {{# if(d.params.sex == "female"){ }}checked{{# } }}>
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">图片</label>
+        <div class="layui-input-inline" style="width: 120px;">
+            <script type="text/html" template>
+                <input type="hidden" readonly name="image" value="{{ d.params.image || '' }}" id="game-main-image-inp" class="layui-input">
+            </script>
+            <button style="float: left;" type="button" class="layui-btn" id="game-main-image">上传图片</button>
+            <div class="layui-upload-list">
+                <script type="text/html" template>
+                    <img class="layui-upload-img" id="game-main-image-view" style="width:80px;height:80px;margin-top: 20px;border: 1px solid #c5c5c5;" src="{{ d.params.image || '' }}">
+                </script>
+            </div>
+        </div>
+        <p id="game-icon-upload-text" style="color: red;float: left;line-height: 38px;">参考尺寸 120*120</p>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label"></label>
+        <div class="layui-input-inline">
+            <input type="button" lay-submit lay-filter="LAY-person-form-edit-submit" value="确认" class="layui-btn">
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+
+
+    layui.use(['admin','table' ,'form', 'upload','laydate'], function(){
+        var $ = layui.$
+            ,admin = layui.admin
+            ,view = layui.view
+            ,table = layui.table
+            ,form = layui.form
+            ,laydate = layui.laydate
+            ,upload = layui.upload;
+
+        var uploadInst5 = upload.render({
+            elem: '#game-main-image'
+            ,url: api_host+'/hot_person/image_upload/?token='+ layui.data('Admin').token
+            ,accept: 'images'
+            ,method: 'post'
+            ,acceptMime: 'image/*'
+            ,before: function(obj){
+                obj.preview(function(index, file, result){
+                    $('#game-main-image-view').attr('src', result);
+                });
+            }
+            ,done: function(res){
+                $('#game-main-image-view').css('border', 'none');
+
+                if(res.code > 0){
+                    return layer.msg('上传失败');
+                }else{
+                    $('#game-main-image-inp').val(res.data.src);
+                    return layer.msg('上传成功');
+                }
+            }
+            ,error: function(){
+                //演示失败状态，并实现重传
+                var demoText = $('#game-icon-upload-text');
+                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+                demoText.find('.demo-reload').on('click', function(){
+                    uploadInst5.upload();
+                });
+            }
+        });
+
+    });
+
+    layui.data.gamelistdone = function(d){
+        layui.use(['form'], function(){
+            var $ = layui.$
+                ,form = layui.form;
+            layui.form.render();
+        });
+    }
+
+
+
+
+</script>

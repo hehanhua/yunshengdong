@@ -1,0 +1,70 @@
+<div class="layui-form" lay-filter="news-index-edit" style="padding: 20px 30px 0 0;">
+
+    <script type="text/html" template>
+        <input type="hidden" name="wxapp_temp_id" value="{{ d.params.wxapp_temp_id || '' }}"  placeholder="id" autocomplete="off" class="layui-input">
+    </script>
+    <div class="layui-form-item">
+        <label class="layui-form-label">名字</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="temp_name" lay-verify="required" value="{{ d.params.temp_name || '' }}"  placeholder="输入名字" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">类型1</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="type_one"  value="{{ d.params.type_one || '' }}"  placeholder="输入名字" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">类型2</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="type_two"  value="{{ d.params.type_two || '' }}"  placeholder="输入名字" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">类型3</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="type_three"  value="{{ d.params.type_three || '' }}"  placeholder="输入名字" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">类型4</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="type_four"  value="{{ d.params.type_four || '' }}"  placeholder="输入名字" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">类型5</label>
+        <div class="layui-input-block">
+            <script type="text/html" template>
+                <input type="text" name="type_five"  value="{{ d.params.type_five || '' }}"  placeholder="输入名字" autocomplete="off" class="layui-input">
+            </script>
+        </div>
+    </div>
+
+
+
+    <div class="layui-form-item">
+        <label class="layui-form-label"></label>
+        <div class="layui-input-inline">
+            <input type="button" lay-submit lay-filter="LAY-news-form-edit-submit" value="确认" class="layui-btn">
+        </div>
+    </div>
+
+
+</div>

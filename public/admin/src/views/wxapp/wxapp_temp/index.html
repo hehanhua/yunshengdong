@@ -1,0 +1,152 @@
+<script src="/static/layui/layui_exts/ace/ace.js"></script>
+<title>小程序列表</title>
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <table id="LAY-wxappTemp-index-list" lay-filter="LAY-wxappTemp-index-list"></table>
+            <script type="text/html" id="table-do-list">
+                <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="game"><i class="layui-icon layui-icon-delete"></i>查看游戏</a>
+            </script>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="news_list_toolbar">
+  <div class="layui-btn-container">
+    <button class="layui-btn layui-btn-sm" lay-event="add">添加模板</button>
+  </div>
+</script>
+
+
+<script>
+    layui.use(['admin', 'table','form','layedit'], function(){
+        var $ = layui.$
+            ,admin = layui.admin
+            ,view = layui.view
+            ,table = layui.table
+            ,layedit = layui.layedit
+            ,form = layui.form;
+
+            //资讯管理
+            table.render({
+                elem: '#LAY-wxappTemp-index-list'
+                ,url: api_host+'/wxapp_temp/temp_list'
+                ,toolbar: '#news_list_toolbar'
+                ,cols: [[
+                    {type: 'checkbox', fixed: 'left'}
+                    ,{field: 'wxapp_temp_id', width: 80, title: 'ID', sort: true}
+                    ,{field: 'temp_name', title: '名字', width: 200}
+                    ,{field: 'create_time', title: '添加时间', width: 200}
+                    ,{title: '操作', width: 250, align: 'center', toolbar: '#table-do-list'}
+                ]]
+                ,page: true
+                ,limit: 30
+                ,height: 'full-200'
+                ,where:{
+                    token: layui.data('Admin').token
+                }
+            });
+          
+          //监听工具条
+          table.on('tool(LAY-wxappTemp-index-list)', function(obj){
+            var data = obj.data;
+            if(obj.event === 'edit'){
+            admin.popup({
+                title: '编辑模板'
+                ,area: ['100%', '100%']
+                ,id: 'LAY-news-edit'
+                ,success: function(layero, index){
+                    view(this.id).render('wxapp/wxapp_temp/edit', data).done(function(){
+                        form.on('submit(LAY-news-form-edit-submit)', function(data){
+                            var sessionData = layui.sessionData('ju6game');
+                            data.field.content = layedit.getContent(sessionData.news_content_id);
+
+                            var field = data.field; //获取提交的字段
+                            admin.req({
+                                url: api_host+'/wxapp_temp/addTemp/'
+                                ,data: field
+                                ,type: 'POST'
+                                ,done: function(res){
+                                    if(res.code == 0){
+                                        layer.msg(res.msg, {
+                                            offset: '15px'
+                                            ,icon: 1
+                                            ,time: 1000
+                                        },function(){
+                                            layui.table.reload('LAY-wxappTemp-index-list');
+                                            layer.close(index);
+                                        });
+                                    }else{
+                                        layer.msg(res.msg, {
+                                            offset: '15px'
+                                            ,icon: 2
+                                            ,time: 1000
+                                        });
+                                    }
+
+                                }
+                            });
+                        });
+
+
+
+                    });
+                }
+            });
+
+        } else if(obj.event === 'game'){  location.hash = '/wxapp/wxapp_temp/game_list/wxapp_temp_id='+data.wxapp_temp_id;}
+
+    });
+
+          table.on('toolbar(LAY-wxappTemp-index-list)', function(obj){
+            if(obj.event === 'add'){
+
+              admin.popup({
+                  title: '添加模版'
+                  ,area: ['100%', '100%']
+                  ,id: 'LAY-news-news-add'
+                  ,success: function(layero, index){
+                      view(this.id).render('wxapp/wxapp_temp/edit').done(function(){
+                          //监听提交
+                          form.on('submit(LAY-news-form-edit-submit)', function(data){
+                              var sessionData = layui.sessionData('ju6game');
+                              data.field.content = layedit.getContent(sessionData.news_content_id);
+
+                              var field = data.field; //获取提交的字段
+                              console.log(field);
+                              admin.req({
+                                  url: api_host+'/wxapp_temp/addTemp/'
+                                  ,data: field
+                                  ,type: 'POST'
+                                  ,done: function(res){
+                                      if(res.code == 0){
+                                          layer.msg(res.msg, {
+                                              offset: '15px'
+                                              ,icon: 1
+                                              ,time: 1000
+                                          },function(){
+                                              layui.table.reload('LAY-wxappTemp-index-list');
+                                              layer.close(index);
+                                          });
+                                      }else{
+                                          layer.msg(res.msg, {
+                                              offset: '15px'
+                                              ,icon: 2
+                                              ,time: 1000
+                                          });
+                                      }
+
+                                  }
+                              });
+                          });
+                      });
+                  }
+              });
+            }
+          });
+
+
+    });
+
+</script>

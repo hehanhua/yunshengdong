@@ -1,0 +1,2296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>如涵-网红孵化营销MCN</title>
+    <meta name="description" content="如涵-网红孵化营销MCN" />
+    <meta name="keywords" content="如涵官网，如涵，如涵控股，如涵控股股份有限公司，Ruhnn，ruhnn，kol，KOL，网红，网红经济"/>
+    <script>
+        !(function() {
+            var t0 = new Date();
+            var os = (function() {
+                var ua = navigator.userAgent,
+                    isWindowsPhone = /(?:Windows Phone)/.test(ua),
+                    isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+                    isAndroid = /(?:Android)/.test(ua),
+                    isFireFox = /(?:Firefox)/.test(ua),
+                    isChrome = /(?:Chrome|CriOS)/.test(ua),
+                    isTablet =
+                        /(?:iPad|PlayBook)/.test(ua) ||
+                        (isAndroid && !/(?:Mobile)/.test(ua)) ||
+                        (isFireFox && /(?:Tablet)/.test(ua)),
+                    isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+                    isPc = !isPhone && !isAndroid && !isSymbian;
+                return {
+                    isTablet: isTablet,
+                    isPhone: isPhone,
+                    isAndroid: isAndroid,
+                    isPc: isPc,
+                };
+            })();
+            var getSearch = function(name) {
+                var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
+                var r = window.location.search.substring(1).match(reg);
+                if (!!r) {
+                    return unescape(r[2]);
+                }
+                return null;
+            };
+            var searchstr = window.location.search,
+                hashstr = window.location.hash;
+            var viewpc = getSearch('vpc');
+            if (!viewpc && (os.isAndroid || os.isPhone)) {
+                location.replace('./wap' + searchstr + hashstr);
+            } else if (os.isTablet) {
+                location.replace('' + searchstr + hashstr);
+            }
+        })();
+    </script>
+    <link href="static/pc/css/style.css" rel="stylesheet"/>
+    <link href="static/pc/css/slick.css" rel="stylesheet"/>
+    <link href="static/pc/css/slide.css" rel="stylesheet"/>
+    <link href="static/pc/css/index.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="static/pc/css/layui.css" media="all"/>
+    <script src="static/pc/js/jquery.js"></script>
+</head>
+<body>
+<!--<div class="bt"><a href="//www.ruhnn.com/en">English</a></div>-->
+<div id="container">
+    <header id="gHeader">
+        <div class="row J_mainNav" align-items="center">
+            <h1 class="logo col-sm-2">
+                <a href="/">
+                    <img src="static/pc/picture/logo.png"/>
+                </a>
+            </h1>
+            <div id="fp-nav" class="right">
+                <ul id="main_nav">
+                    <li>
+                        <a href="#index"><span class="fp-tooltip right">首页</span></a>
+                    </li>
+                    <li>
+                        <a href="#hot"><span class="fp-tooltip right">网红互娱</span></a>
+                    </li>
+                    <li>
+                        <a href="{:url('pc/index/video')}"><span class="fp-tooltip right">自媒体发布</span></a>
+                    </li>
+                    <li>
+                        <a href="#ruhnn"><span class="fp-tooltip right">关于云声动</span></a>
+                    </li>
+                    <li>
+                        <a href="#service"
+                        ><span class="fp-tooltip right">业务范围</span></a
+                        >
+                    </li>
+                    <li>
+                        <a href="#contact"
+                        ><span class="fp-tooltip right">合作联系</span></a
+                        >
+                    </li>
+                    <li>
+                        <a target="_blank" href="//www.ruhnn.com/news/"
+                        ><span class="fp-tooltip right">媒体报道</span></a
+                        >
+                    </li>
+                    <li>
+                        <a target="_blank" href="//ir.ruhnn.com/">
+                            <span class="fp-tooltip right">投资者关系</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3 text-right hidden">
+                <img
+                        src="static/pc/picture/icon01.png"
+                        alt=""
+                />000-000-0000
+            </div>
+        </div>
+    </header>
+    <section id="main">
+        <div class="returnTop">
+            <img src="static/pc/picture/return.png"/>
+        </div>
+        <div class="module section screen-full" id="index">
+            <div id="sliderWrapper">
+                <ul id="sliderBanner">
+                    <li class="banner-top-new">
+                        <div class="banner-top-new-text">
+                            <img src="static/pc/picture/report-2-txt.png" alt=""/>
+                        </div>
+                        <div class="scoll">
+                            <a href="#hot">
+                                <img src="static/pc/picture/icon02.png" alt=""/>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="banner-top">
+                        <div class="inner index">
+                            <h2 class="h1Ttl01">全国最大的电商网红孵化与营销平台</h2>
+                            <h2 class="h2Ttl01">助力品牌实现品效合一</h2>
+                        </div>
+                        <div class="scoll">
+                            <a href="#hot">
+                                <img src="static/pc/picture/icon02.png" alt=""/>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--独家红人-->
+        <div class="module section" id="hot">
+            <!--独家红人-->
+            <div class="bg-hot screen-full">
+                <div class="table-layer">
+                    <div class="inner kol">
+                        <h2 class="h2Ttl02">RUHNN KOL <span>独家红人</span></h2>
+                        <div class="row item">
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/img03.jpg"
+                                        alt="@张大奕eve "
+                                />
+                                <p class="blacktext">
+                                    <span>@张大奕eve </span>
+                                    <a href="https://weibo.com/zhangyieve"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@张大奕eve "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            微博最具商业价值红人
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                                <span>@张大奕eve </span
+                                                ><a
+                                            href="https://weibo.com/zhangyieve"
+                                            target="_blank"
+                                    ><img
+                                            src="static/pc/picture/icon05.png"
+                                            class="weiboimg"
+                                            alt="@张大奕eve "
+                                    /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z305113g3960.jpg"
+                                        alt="@虫虫Chonny "
+                                />
+                                <p class="blacktext">
+                                    <span>@虫虫Chonny </span>
+                                    <a href="https://weibo.com/u/2634154091"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@虫虫Chonny "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            美妆V赏<br />中国年度十大美妆红人
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                                <span>@虫虫Chonny </span
+                                                ><a
+                                            href="https://weibo.com/u/2634154091"
+                                            target="_blank"
+                                    ><img
+                                            src="static/pc/picture/icon05.png"
+                                            class="weiboimg"
+                                            alt="@虫虫Chonny "
+                                    /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z305113jc02.jpg"
+                                        alt="@delicious大金 "
+                                />
+                                <p class="blacktext">
+                                    <span>@delicious大金 </span>
+                                    <a href="https://weibo.com/kings1992"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@delicious大金 "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            微博最受欢迎时尚红人
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                                <span>@delicious大金 </span
+                                                ><a
+                                            href="https://weibo.com/kings1992"
+                                            target="_blank"
+                                    ><img
+                                            src="static/pc/picture/icon05.png"
+                                            class="weiboimg"
+                                            alt="@delicious大金 "
+                                    /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z305113q1v4.jpg"
+                                        alt="@杨霞-Sunny "
+                                />
+                                <p class="blacktext">
+                                    <span>@杨霞-Sunny </span>
+                                    <a href="https://weibo.com/ygxia"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@杨霞-Sunny "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            微博十大美妆红人
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                                <span>@杨霞-Sunny </span
+                                                ><a href="https://weibo.com/ygxia" target="_blank"
+                                    ><img
+                                            src="static/pc/picture/icon05.png"
+                                            class="weiboimg"
+                                            alt="@杨霞-Sunny "
+                                    /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z305113syv.jpg"
+                                        alt="@温婉Wenwan_ "
+                                />
+                                <p class="blacktext">
+                                    <span>@温婉Wenwan_ </span>
+                                    <a href="https://weibo.com/u/5581262785"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@温婉Wenwan_ "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            微博2018年度<br />十大影响力帅哥美女
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                                <span>@温婉Wenwan_ </span
+                                                ><a
+                                            href="https://weibo.com/u/5581262785"
+                                            target="_blank"
+                                    ><img
+                                            src="static/pc/picture/icon05.png"
+                                            class="weiboimg"
+                                            alt="@温婉Wenwan_ "
+                                    /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z305113ugf.jpg"
+                                        alt="@莉贝琳 "
+                                />
+                                <p class="blacktext">
+                                    <span>@莉贝琳 </span>
+                                    <a href="https://weibo.com/liblin"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@莉贝琳 "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            时尚红人，带货女王
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@莉贝琳 </span>
+                                        <a href="https://weibo.com/liblin" target="_blank"
+                                        ><img
+                                                src="static/pc/picture/icon05.png"
+                                                class="weiboimg"
+                                                alt="@莉贝琳 "
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z30511392b61.jpg"
+                                        alt="@李璐Gemma "
+                                />
+                                <p class="blacktext">
+                                    <span>@李璐Gemma </span>
+                                    <a href="https://weibo.com/u/1857740417"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@李璐Gemma "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            微博十大视频新秀
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@李璐Gemma </span>
+                                        <a
+                                                href="https://weibo.com/u/1857740417"
+                                                target="_blank"
+                                        ><img
+                                                src="static/pc/picture/icon05.png"
+                                                class="weiboimg"
+                                                alt="@李璐Gemma "
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z30511394y96.jpg"
+                                        alt="@彭特务 "
+                                />
+                                <p class="blacktext">
+                                    <span>@彭特务 </span>
+                                    <a href="https://weibo.com/PENGTEWU6"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@彭特务 "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            微博2018<br />新锐时尚美妆红人
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@彭特务 </span>
+                                        <a
+                                                href="https://weibo.com/PENGTEWU6"
+                                                target="_blank"
+                                        ><img
+                                                src="static/pc/picture/icon05.png"
+                                                class="weiboimg"
+                                                alt="@彭特务 "
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z305114009531.jpg"
+                                        alt="@满满Cyim "
+                                />
+                                <p class="blacktext">
+                                    <span>@满满Cyim </span>
+                                    <a href="https://weibo.com/cyiman"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@满满Cyim "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            日系穿搭/美妆达人
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@满满Cyim </span>
+                                        <a href="https://weibo.com/cyiman" target="_blank"
+                                        ><img
+                                                src="static/pc/picture/icon05.png"
+                                                class="weiboimg"
+                                                alt="@满满Cyim "
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z305114032i1.jpg"
+                                        alt="@顽童大人 "
+                                />
+                                <p class="blacktext">
+                                    <span>@顽童大人 </span>
+                                    <a href="https://weibo.com/u/6478549937"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@顽童大人 "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            新生代带货达人
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@顽童大人 </span>
+                                        <a
+                                                href="https://weibo.com/u/6478549937"
+                                                target="_blank"
+                                        ><img
+                                                src="static/pc/picture/icon05.png"
+                                                class="weiboimg"
+                                                alt="@顽童大人 "
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="btm-ttl">
+                            如涵孵化100+独家红人，更涵盖业界2000+红人资源
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--独家红人-->
+            <div class="bg-hot screen-full">
+                <div class="table-layer">
+                    <div class="inner kol">
+                        <h2 class="h2Ttl02">RUHNN KOL <span>独家红人</span></h2>
+                        <div class="row item">
+                            <div class="col-sm-3">
+                                <img src="static/pc/picture/1-1z319145g0413.jpg" alt="@左娇娇Rosemary "/>
+                                <p class="blacktext">
+                                    <span>@左娇娇Rosemary </span>
+                                    <a href="https://weibo.com/rosemary16"
+                                    ><img src="static/pc/picture/icon04.png" alt="@左娇娇Rosemary " class="weiboimg"/>
+                                    </a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            美妆/穿搭KOL
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@左娇娇Rosemary </span>
+                                        <a href="https://weibo.com/rosemary16" target="_blank">
+                                            <img src="static/pc/picture/icon05.png" class="weiboimg" alt="@左娇娇Rosemary "/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img src="static/pc/picture/1-1z319145622262.jpg" alt="@宝剑嫂 "/>
+                                <p class="blacktext">
+                                    <span>@宝剑嫂 </span>
+                                    <a href="https://weibo.com/u/5724402884">
+                                        <img src="static/pc/picture/icon04.png" alt="@宝剑嫂 " class="weiboimg"/>
+                                    </a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            B站TOP级美妆博主
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@宝剑嫂</span>
+                                        <a href="https://weibo.com/u/5724402884" target="_blank">
+                                            <img src="static/pc/picture/icon05.png" class="weiboimg" alt="@宝剑嫂 "/>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z31914551w92.jpg"
+                                        alt="@-朴正义 "
+                                />
+                                <p class="blacktext">
+                                    <span>@-朴正义 </span>
+                                    <a href="https://weibo.com/zhengyi0325"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@-朴正义 "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            微博一直播<br />年度时尚红人最大V
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@-朴正义 </span>
+                                        <a
+                                                href="https://weibo.com/zhengyi0325"
+                                                target="_blank"
+                                        ><img
+                                                src="static/pc/picture/icon05.png"
+                                                class="weiboimg"
+                                                alt="@-朴正义 "
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z3191451441d.jpg"
+                                        alt="@LUSON妈- "
+                                />
+                                <p class="blacktext">
+                                    <span>@LUSON妈- </span>
+                                    <a href="https://weibo.com/dadapigisme"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@LUSON妈- "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            微博2018<br />十大成长母婴育儿大V
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@LUSON妈- </span>
+                                        <a
+                                                href="https://weibo.com/dadapigisme"
+                                                target="_blank"
+                                        ><img
+                                                src="static/pc/picture/icon05.png"
+                                                class="weiboimg"
+                                                alt="@LUSON妈- "
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z31915020g19.jpg"
+                                        alt="@沈大美Shirine "
+                                />
+                                <p class="blacktext">
+                                    <span>@沈大美Shirine </span>
+                                    <a href="https://weibo.com/u/2693420092"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@沈大美Shirine "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            美妆/护肤KOL
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@沈大美Shirine </span>
+                                        <a
+                                                href="https://weibo.com/u/2693420092"
+                                                target="_blank"
+                                        ><img
+                                                src="static/pc/picture/icon05.png"
+                                                class="weiboimg"
+                                                alt="@沈大美Shirine "
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z319161142b7.jpg"
+                                        alt="@王宛尘 "
+                                />
+                                <p class="blacktext">
+                                    <span>@王宛尘 </span>
+                                    <a href="https://weibo.com/vanessa924"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@王宛尘 "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            美妆鬼才/综艺怪咖
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@王宛尘 </span>
+                                        <a
+                                                href="https://weibo.com/vanessa924"
+                                                target="_blank"
+                                        ><img
+                                                src="static/pc/picture/icon05.png"
+                                                class="weiboimg"
+                                                alt="@王宛尘 "
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z319161224c4.jpg"
+                                        alt="笑笑同学啊_ "
+                                />
+                                <p class="blacktext">
+                                    <span>笑笑同学啊_ </span>
+                                    <a href="https://weibo.com/xiachenxiao"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="笑笑同学啊_ "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            时尚美妆/旅行摄影
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>笑笑同学啊_ </span>
+                                        <a
+                                                href="https://weibo.com/xiachenxiao"
+                                                target="_blank"
+                                        ><img
+                                                src="static/pc/picture/icon05.png"
+                                                class="weiboimg"
+                                                alt="笑笑同学啊_ "
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z31916130d01.jpg"
+                                        alt="@荷静hajin "
+                                />
+                                <p class="blacktext">
+                                    <span>@荷静hajin </span>
+                                    <a href="https://weibo.com/u/6357315410"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@荷静hajin "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            韩流标杆/文艺博主
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@荷静hajin </span>
+                                        <a
+                                                href="https://weibo.com/u/6357315410"
+                                                target="_blank"
+                                        ><img
+                                                src="static/pc/picture/icon05.png"
+                                                class="weiboimg"
+                                                alt="@荷静hajin "
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z31916134x27.jpg"
+                                        alt="@Mt文文婷 "
+                                />
+                                <p class="blacktext">
+                                    <span>@Mt文文婷 </span>
+                                    <a href="https://weibo.com/u/6526613670"
+                                    ><img
+                                            src="static/pc/picture/icon04.png"
+                                            alt="@Mt文文婷 "
+                                            class="weiboimg"
+                                    /></a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">
+                                            复古穿搭/带货达人
+                                        </div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@Mt文文婷 </span>
+                                        <a
+                                                href="https://weibo.com/u/6526613670"
+                                                target="_blank"
+                                        ><img
+                                                src="static/pc/picture/icon05.png"
+                                                class="weiboimg"
+                                                alt="@Mt文文婷 "
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <!-- TODO 戴黎婷图片 -->
+                                <img
+                                        src="static/pc/picture/2.png"
+                                        alt="@戴黎婷 "
+                                />
+                                <p class="blacktext">
+                                    <span>@戴黎婷</span>
+                                    <a href="https://weibo.com/u/6900530553">
+                                        <img
+                                                src="static/pc/picture/icon04.png"
+                                                alt="@戴黎婷 "
+                                                class="weiboimg"
+                                        />
+                                    </a>
+                                </p>
+                                <div class="sub">
+                                    <div class="table">
+                                        <div class="table-cell height-100">美妆/护肤</div>
+                                    </div>
+                                    <p class="whitetext">
+                                        <span>@戴黎婷 </span>
+                                        <a
+                                                href="https://weibo.com/u/6900530553"
+                                                target="_blank"
+                                        >
+                                            <img
+                                                    src="static/pc/picture/icon05.png"
+                                                    class="weiboimg"
+                                                    alt="@戴黎婷 "
+                                            />
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="btm-ttl">
+                            红人影响力覆盖美妆时尚、生活方式、母婴快消等多个女性消费领域
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--独家红人 轮播-->
+            <di v class="bg-hot screen-full">
+                <div class="table-layer">
+                    <div class="inner kol">
+                        <h2 class="h2Ttl02">RUHNN KOL <span>独家红人</span></h2>
+                        <ul id="kol-inner" class="inner-kol">
+                            <li>
+                                <div class="row item">
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/bb.png"
+                                                alt="@BB大哥 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@BB大哥 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/barbarat?topnav=1&wvr=6&topsug=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@BB大哥 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/lili.png"
+                                                alt="@LiLi 长不大 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@LiLi 长不大 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/5036476546?topnav=1&wvr=6&topsug=1&is_all=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@LiLi 长不大 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/lsy.png"
+                                                alt="@Lsy 秦公子"
+                                        />
+                                        <p class="blacktext">
+                                            <span>@Lsy 秦公子 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/3919689917?topnav=1&wvr=6&topsug=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@Lsy 秦公子 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/tuki.png"
+                                                alt="@阿图 tuki "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@阿图 tuki </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/5509141039?topnav=1&wvr=6&topsug=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@阿图 tuki "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/kz.png"
+                                                alt="@蒋澄澄 KZ "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@蒋澄澄 KZ </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/6553130389?topnav=1&wvr=6&topsug=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@蒋澄澄 KZ "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/guang.png"
+                                                alt="@卡卡会发光 guang "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@卡卡会发光 guang </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/5999249159?topnav=1&wvr=6&topsug=1&is_all=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@卡卡会发光 guang "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/yucatnip.png"
+                                                alt="@柳荷叶 Yucatnip "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@柳荷叶 Yucatnip </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/6419406177?topnav=1&wvr=6&topsug=1&is_all=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@柳荷叶 Yucatnip "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/meili.png"
+                                                alt="@同学肖美丽 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@同学肖美丽 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/2283890452?topnav=1&wvr=6&topsug=1&is_all=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@同学肖美丽 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/qizai.png"
+                                                alt="@一颗七崽 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@一颗七崽 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/hhhhuying?topnav=1&wvr=6&topsug=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@一颗七崽 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/an.png"
+                                                alt="@祝安 AN "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@祝安 AN </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/3178944562?topnav=1&wvr=6&topsug=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@祝安 AN "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row item">
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/zuzu.png"
+                                                alt="@祖祖 zuzu "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@祖祖 zuzu </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/5348244803?topnav=1&wvr=6&topsug=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@祖祖 zuzu "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/zouzou.png"
+                                                alt="@造型师邹邹 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@造型师邹邹 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/zouzoump?topnav=1&wvr=6&topsug=1&is_all=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@造型师邹邹 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/wushi.png"
+                                                alt="@五十青 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@五十青 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/2313791075?topnav=1&wvr=6&topsug=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@五十青 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <!-- TODO 帕尔哈迪迪图片 -->
+                                        <img
+                                                src="static/pc/picture/3.png"
+                                                alt="@帕尔哈迪迪"
+                                        />
+                                        <p class="blacktext">
+                                            <span>@帕尔哈迪迪</span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/cadyzone"
+                                            >
+                                                <img
+                                                        src="static/pc/picture/icon04.png"
+                                                        alt="@帕尔哈迪迪"
+                                                        class="weiboimg"
+                                                />
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/baobao.png"
+                                                alt="@小象饱饱 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@小象饱饱 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/x1ang3?topnav=1&wvr=6&topsug=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@小象饱饱 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/loly.png"
+                                                alt="@彤彤 loly "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@彤彤 loly </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/3076290421?topnav=1&wvr=6&topsug=1&is_all=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@彤彤 loly "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/yidake.png"
+                                                alt="@艺大可 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@艺大可 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/511237511?topnav=1&wvr=6&topsug=1&is_all=1"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@艺大可 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/jiujiu.png"
+                                                alt="@-鱼九九- "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@-鱼九九- </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/3736549051?"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@-鱼九九- "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <!-- TODO 77akikii -->
+                                        <img
+                                                src="static/pc/picture/1.png"
+                                                alt="@77akikii "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@77akikii</span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/7001355280"
+                                            >
+                                                <img
+                                                        src="static/pc/picture/icon04.png"
+                                                        alt="@77akikii"
+                                                        class="weiboimg"
+                                                />
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/stunna.png"
+                                                alt="@晶晶 stunna "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@晶晶 stunna </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/2293171063?"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@晶晶 stunna "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row item">
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/echo.png"
+                                                alt="@梁一口 echo"
+                                        />
+                                        <p class="blacktext">
+                                            <span>@梁一口 echo </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/2230278551?"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@梁一口 echo"
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <!-- TODO 一鲜 poppy -->
+                                        <img
+                                                src="static/pc/picture/4.png"
+                                                alt="@一鲜 poppy"
+                                        />
+                                        <p class="blacktext">
+                                            <span>@一鲜 poppy</span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/6967370935"
+                                            >
+                                                <img
+                                                        src="static/pc/picture/icon04.png"
+                                                        alt="@一鲜 poppy"
+                                                        class="weiboimg"
+                                                />
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/manman.png"
+                                                alt="@你的慢慢_ "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@你的慢慢_ </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/6465158326?"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@你的慢慢_ "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/raomengya.png"
+                                                alt="@饶萌呀 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@饶萌呀 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/2268084821?"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@饶萌呀 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/rongerduo.png"
+                                                alt="@绒耳朵儿 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@绒耳朵儿 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/3946599572?"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@绒耳朵儿 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/wendyz.png"
+                                                alt="@铁一 WENDYZ "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@铁一 WENDYZ </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/3214017907?"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@铁一 WENDYZ "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/wenshi.png"
+                                                alt="@文室长呐 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@文室长呐 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/6713260011?"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@文室长呐 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/xiaoye.png"
+                                                alt="@小野智恩- "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@小野智恩- </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/6727963274?"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@小野智恩- "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/yetata.png"
+                                                alt="@叶它它 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@叶它它 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/yttanne?"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@叶它它 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img
+                                                src="static/pc/picture/xiaomeng.png"
+                                                alt="@只小萌 "
+                                        />
+                                        <p class="blacktext">
+                                            <span>@只小萌 </span>
+                                            <a
+                                                    target="_blank"
+                                                    href="https://weibo.com/u/3101275054?"
+                                            ><img
+                                                    src="static/pc/picture/icon04.png"
+                                                    alt="@只小萌 "
+                                                    class="weiboimg"
+                                            /></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 红人获奖 -->
+            <div class="bg-hot-1 screen-full">
+                <div class="table-layer">
+                    <div class="inner kol">
+                        <h2 class="h2Ttl02">KOL AWARDS <span>红人获奖</span></h2>
+                        <div class="row item">
+                            <div class="slideGroup">
+                                <div class="parBd">
+                                    <div class="slideBox">
+                                        <a class="sPrev" href="javascript:void(0)"></a>
+                                        <ul>
+                                            <li>
+                                                <div class="pic">
+                                                    <div class="Slide1">
+                                                        <img
+                                                                class="img"
+                                                                src="static/pc/picture/1-1z320104133416.jpg"
+                                                        />
+                                                        <span class="Slidetxt">
+                                                                    @张大奕eve
+                                                                    <p class="bc-black">
+                                                                        微博最具商业价值红人
+                                                                    </p>
+                                                                </span>
+                                                    </div>
+                                                    <div class="Slide1">
+                                                        <!--TODO 温婉-->
+                                                        <img
+                                                                class="img"
+                                                                src="static/pc/picture/wenwan1.png"
+                                                        />
+                                                        <span class="Slidetxt">
+                                                                    @温婉Wenwan_
+                                                                    <p class="bc-black">
+                                                                        微博 2019
+                                                                        最具商业价值颜值红人<br />微博
+                                                                        2019 年度带货红人
+                                                                    </p>
+                                                                </span>
+                                                    </div>
+                                                    <div class="Slide1">
+                                                        <!--TODO 宝剑嫂-->
+                                                        <img
+                                                                class="img"
+                                                                src="static/pc/picture/baojiansao.png"
+                                                        />
+                                                        <span class="Slidetxt">
+                                                                    @宝剑嫂
+                                                                    <p class="bc-black">
+                                                                        微博 2019 十大影响力美妆大 V
+                                                                        <br />
+                                                                        天猫国际全球趋势网紫
+                                                                    </p>
+                                                                </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pic">
+                                                    <div class="Slide1">
+                                                        <!--TODO 满满Cyim-->
+                                                        <img
+                                                                class="img"
+                                                                src="static/pc/picture/manman.jpg"
+                                                        />
+                                                        <span class="Slidetxt">
+                                                                    @满满Cyim
+                                                                    <p class="bc-black">
+                                                                        微博 2019 十大影响力颜值大 V
+                                                                    </p>
+                                                                </span>
+                                                    </div>
+                                                    <div class="Slide1">
+                                                        <!--TODO 彭特务-->
+                                                        <img
+                                                                class="img"
+                                                                src="static/pc/picture/pengtewu.png"
+                                                        />
+                                                        <span class="Slidetxt">
+                                                                    @彭特务
+                                                                    <p class="bc-black">
+                                                                        微博2019十大影响力颜值视频红人
+                                                                        <br />
+                                                                        微博2018新锐时尚美妆红人
+                                                                    </p>
+                                                                </span>
+                                                    </div>
+                                                    <div class="Slide1">
+                                                        <img
+                                                                class="img"
+                                                                src="static/pc/picture/1-1z32010410y34.jpg"
+                                                        />
+                                                        <span class="Slidetxt">
+                                                                    @虫虫Chonny
+                                                                    <p class="bc-black">
+                                                                        中澳电商青年大使
+                                                                        <br />
+                                                                        2018CIBE美妆形象大使
+                                                                    </p>
+                                                                </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pic">
+                                                    <div class="Slide1">
+                                                        <img
+                                                                class="img"
+                                                                src="static/pc/picture/1-1z320103z2130.jpg"
+                                                        />
+                                                        <span class="Slidetxt">
+                                                                    @delicious大金
+                                                                    <p class="bc-black">
+                                                                        天猫国际全球趋势网紫<br />微博2018年度十大电商红人
+                                                                    </p>
+                                                                </span>
+                                                    </div>
+                                                    <div class="Slide1">
+                                                        <!--TODO 憨娜 Hannah-->
+                                                        <img
+                                                                class="img"
+                                                                src="static/pc/picture/hanna.png"
+                                                        />
+                                                        <span class="Slidetxt">
+                                                                    @憨娜 Hannah
+                                                                    <p class="bc-black">
+                                                                        天猫国际全球趋势网紫
+                                                                    </p>
+                                                                </span>
+                                                    </div>
+                                                    <div class="Slide1">
+                                                        <img
+                                                                class="img"
+                                                                src="static/pc/picture/1-1z320103s93v.jpg"
+                                                        />
+                                                        <span class="Slidetxt">
+                                                                    @杨霞-Sunny
+                                                                    <p class="bc-black">
+                                                                        时尚红人全球峰会时尚精英
+                                                                    </p>
+                                                                </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="pic">
+                                                    <div class="Slide1">
+                                                        <img
+                                                                class="img"
+                                                                src="static/pc/picture/1-1z32010363b42.jpg"
+                                                        />
+                                                        <span class="Slidetxt">
+                                                                    @LUSON妈-（左）
+                                                                    <p class="bc-black">
+                                                                        微博2018
+                                                                        <br />
+                                                                        十大成长母婴育儿大V
+                                                                    </p>
+                                                                </span>
+                                                    </div>
+                                                    <div class="Slide1">
+                                                        <img
+                                                                class="img"
+                                                                src="static/pc/picture/1-1z32010360cq.jpg"
+                                                        />
+                                                        <span class="Slidetxt"
+                                                        >@刘梓萌嗎
+                                                                    <p class="bc-black">
+                                                                        微博2018
+                                                                        <br />
+                                                                        十大影响力帅哥美女大V
+                                                                    </p>
+                                                                </span>
+                                                    </div>
+                                                    <div class="Slide1">
+                                                        <img
+                                                                class="img"
+                                                                src="static/pc/picture/1-1z320103512649.jpg"
+                                                        />
+                                                        <span class="Slidetxt"
+                                                        >@-朴正义
+                                                                    <p class="bc-black">
+                                                                        微博一直播
+                                                                        <br />
+                                                                        年度时尚红人最大V
+                                                                    </p>
+                                                                </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <a class="sNext" href="javascript:void(0)"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--关于如涵-->
+        <div class="module section" id="ruhnn">
+            <!-- 关于如涵 -->
+            <div class="about-bg screen-full">
+                <div class="table-layer">
+                    <div class="inner about">
+                        <h2 class="h2Ttl02">ABOUT RUHNN <span>关于如涵</span></h2>
+                        <p>
+                            中国网红电商第一股，阿里巴巴集团唯一入股的MCN机构<br />
+                            作为国内最大的电商网红孵化与营销平台<br />
+                            如涵已在红人孵化数上稳居行业TOP1<br />
+                            <span style="margin: 0 15px;">
+                                        并与微博、抖音、快手、B站等平台达成战略合作，致力于为更多品牌实现品效合一
+                                    </span>
+                        </p>
+
+                        <div class="row item">
+                            <div class="col-sm-3"><span>159</span>独家红人</div>
+                            <div class="col-sm-3">
+                                        <span>2.02亿<font color="#c6973d">+</font></span
+                                        >全网粉丝覆盖
+                            </div>
+                            <div class="col-sm-3">
+                                        <span>25.9亿<font color="#c6973d">+</font></span
+                                        >月曝光量
+                            </div>
+                            <div class="col-sm-3"><span>961</span>服务品牌</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-bg screen-full">
+                <div class="table-layer">
+                    <div class="inner history">
+                        <ul class="tab tab-01">
+                            <li class="on"><a href="#t1">发展历程</a></li>
+                            <li><a href="#t2">荣誉奖项</a></li>
+                        </ul>
+
+                        <!-- 发展历程 -->
+                        <div class="tab-box tab-box-01">
+                            <h2 class="h2Ttl02">
+                                DEVELOPMENT HISTORY <span>发展历程</span>
+                            </h2>
+                            <div class="pho">
+                                <img
+                                        src="static/pc/picture/img01.png"
+                                        alt=""
+                                />
+                            </div>
+                        </div>
+
+                        <!-- 荣誉奖项 -->
+                        <div class="tab-box tab-box-01 hidden">
+                            <h2 class="h2Ttl02">AWARDS <span>荣誉奖项</span></h2>
+                            <div class="row item">
+                                <div class="slideGroup">
+                                    <div class="parBd">
+                                        <div class="slideBox">
+                                            <a class="sPrev" href="javascript:void(0)"></a>
+                                            <ul>
+                                                <li>
+                                                    <div class="pic">
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/10.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        中国数字化营销“金牛奖”<br />最佳营销机构
+                                                                    </span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/11.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        2019年度内容电商机构
+                                                                    </span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/12.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        2019年度十大MCN机构
+                                                                    </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="pic">
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/13.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        2019年度电商类影响力制作机构
+                                                                    </span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/14.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        最具社会影响力MCN机构
+                                                                    </span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/15.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        2019年度最具投资价值企业
+                                                                    </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="pic">
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/1.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        2019年度微博电商战略合作伙伴
+                                                                    </span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/2.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        2019十大影响力颜值红人机构
+                                                                    </span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/3.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        2019年度微博战略合作机构
+                                                                    </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="pic">
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/5.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        微博2019年度红人机构
+                                                                    </span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/4.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        2019快手MCN十大新锐机构
+                                                                    </span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/1-1z325163046327.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        2019克劳瑞最具商业价值MCN
+                                                                    </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="pic">
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/6.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        淘宝联盟：流量之星奖
+                                                                    </span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/7.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        屈臣氏健康美丽大赏年度最佳MCN合作伙伴
+                                                                    </span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/8.jpg"
+                                                            />
+                                                            <span class="Slidetxt">
+                                                                        中国化妆品大会蓝玫奖：2019年度最具影响力MCN机构
+                                                                    </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="pic">
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/img02_1.jpg"
+                                                            />
+                                                            <span class="Slidetxt"
+                                                            >2018年度微博战略合作机构<br
+                                                            /></span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/img02_2.jpg"
+                                                            />
+                                                            <span class="Slidetxt"
+                                                            >微博2018十大影响力时尚机构<br
+                                                            /></span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/img02_3.jpg"
+                                                            />
+                                                            <span class="Slidetxt"
+                                                            >微博2018影响力帅哥美女机构<br
+                                                            /></span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="pic">
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/img02_6.jpg"
+                                                            />
+                                                            <span class="Slidetxt"
+                                                            >微博2018十大影响力电商机构<br
+                                                            /></span>
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/img02_5.jpg"
+                                                            />
+                                                            <span class="Slidetxt"
+                                                            >超级红人节2018<br />中国年度红人机构</span
+                                                            >
+                                                        </div>
+                                                        <div class="Slide1">
+                                                            <img
+                                                                    class="img"
+                                                                    src="static/pc/picture/9.jpg"
+                                                            />
+                                                            <span class="Slidetxt"
+                                                            >2018年度优秀骨干企业</span
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <a class="sNext" href="javascript:void(0)"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 业务范围 合作案例-->
+        <div class="module section" id="service">
+            <!--业务范围-->
+            <div class="business-bg screen-full">
+                <div class="table-layer">
+                    <div class="inner business">
+                        <h2 class="h2Ttl02">SPHERE OF BUSINESS <span>业务范围</span></h2>
+                        <div class="row item">
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z30516200w32.png"
+                                        width="208"
+                                        height="270"
+                                        alt="网红孵化"
+                                />
+                                <h3>网红孵化</h3>
+                                <p>
+                                    挖掘孵化各领域潜力素人<br />
+                                    致力于让有才的人更有财
+                                </p>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z30516195m15.png"
+                                        width="208"
+                                        height="270"
+                                        alt="网红电商"
+                                />
+                                <h3>网红电商</h3>
+                                <p>
+                                    如涵网红孵化团队与<br />
+                                    外部资深电商运营团队强强联手<br />
+                                    打造红人店铺IP
+                                </p>
+                            </div>
+                            <div class="col-sm-3">
+                                <img
+                                        src="static/pc/picture/1-1z3051619435f.png"
+                                        width="208"
+                                        height="270"
+                                        alt="网红营销"
+                                />
+                                <h3>网红营销</h3>
+                                <p>
+                                    构建以粉丝为中心的精准营销生态<br />
+                                    为品牌提供<br />
+                                    从广告到转化的全链路营销方案
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    //ruhnn-web.oss-cn-hangzhou.aliyuncs.com/ruhnn-new-index/uploads/
+                </div>
+            </div>
+
+            <!--合作案例-->
+            <div class="case-bg screen-full">
+                <div class="table-layer">
+                    <div class="inner case">
+                        <h2 class="h2Ttl02">COOPERATION CASES <span>合作案例</span></h2>
+                        <ul id="slider01">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h2>HFP&如涵 | 多平台、多维度引爆新品</h2>
+                                        <p>
+                                            内容策略:
+                                            <br />
+                                            针对多聚糖乳液产品功能，结合夏天出油/底妆不服帖等用
+                                            户痛点，采用植入包增加曝光+定制视频植入心智+微信深文促成转化的内容策略进行传播种草。
+                                        </p>
+                                        <p>
+                                            累计曝光量达&nbsp;
+                                            <span class="color-cc3366">
+                                                        <strong>1250万</strong>
+                                                    </span>
+                                            <br />
+                                            互动量达
+                                            <span class="color-cc3366">
+                                                        <strong>8万+</strong>
+                                                    </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- TODO  -->
+                                        <img
+                                                src="static/pc/picture/hfp.png"
+                                                width="600"
+                                                height="588"
+                                                alt="HFP&如涵 | 多平台、多维度引爆"
+                                        />
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h2>
+                                            Burberry&如涵 | 美妆KOL线下打卡 图文品宣人气引流
+                                        </h2>
+                                        <p>
+                                            内容策略:
+                                            <br />
+                                            通过美妆 KOL 的影响力，线下打卡
+                                            #Burberry花与她香氛# 沉
+                                            浸式限时体验店，联合同步线上推广，为新品宣传引流，提升年轻人消费者品牌认知度。
+                                        </p>
+                                        <p>
+                                            累计曝光量达&nbsp;
+                                            <span class="color-cc3366">
+                                                        <strong>830万+</strong>
+                                                    </span>
+                                            <br />
+                                            互动量达
+                                            <span class="color-cc3366">
+                                                        <strong>3万+</strong>
+                                                    </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- TODO  -->
+                                        <img
+                                                src="static/pc/picture/burberry.png"
+                                                width="600"
+                                                height="588"
+                                                alt="Burberry&如涵 | 美妆KOL线下打卡 图文品宣引流人气"
+                                        />
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h2>
+                                            兰蔻&如涵 | “护肤微生态时代” 第二代小黑瓶推广
+                                        </h2>
+                                        <p>
+                                            内容策略:
+                                            <br />
+                                            通过高颜值、美妆博主、短视频 Vlog
+                                            达人展示兰蔻第二代小
+                                            黑瓶使用感受，使用前后对比图，产品细节和质感深度露出，提出产品的护肤理念及研发背景，对产品进行深度种草。
+                                        </p>
+                                        <p>
+                                            视频播放量量&nbsp;
+                                            <span class="color-cc3366">
+                                                        <strong>200万+</strong>
+                                                    </span>
+                                            <br />
+                                            累计曝光量达&nbsp;
+                                            <span class="color-cc3366">
+                                                        <strong>800万+</strong>
+                                                    </span>
+                                            <br />
+                                            互动量达
+                                            <span class="color-cc3366">
+                                                        <strong>8万+</strong>
+                                                    </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- TODO  -->
+                                        <img
+                                                src="static/pc/picture/lankou.png"
+                                                width="600"
+                                                height="588"
+                                                alt="兰蔻&如涵 | 推⼴ “护肤进⼊入微⽣生态时代” 的新概念，推出新品"
+                                        />
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h2>屈臣氏HWB&如涵 | TOP级KOL亲临现场</h2>
+                                        <p>
+                                            内容策略:
+                                            <br />
+                                            如涵现象级红人@温婉Wenwan_、美妆届顶流@虫虫Chonny助阵屈臣氏HWB健康美丽大赏现场，作为TOP级KOL，通过红人建立口碑，为HWB榜单背书。
+                                            <br />
+                                            KOL出席HWB大赏让品牌更加年轻化、大众化，帮助品牌占领年轻消费者心智。
+                                        </p>
+                                        <p>
+                                            累计曝光量达&nbsp;
+                                            <span class="color-cc3366">
+                                                        <strong>1000万+</strong>
+                                                    </span>
+                                            <br />
+                                            互动量达
+                                            <span class="color-cc3366">
+                                                        <strong>3万+</strong>
+                                                    </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- TODO  -->
+                                        <img
+                                                src="static/pc/picture/hwb.png"
+                                                width="600"
+                                                height="588"
+                                                alt="屈臣氏HWB&如涵 | TOP级KOL亲临现场"
+                                        />
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h2>海蓝之谜&如涵 | LA MER 天赋年轻 新品推广</h2>
+                                        <p>
+                                            内容策略:
+                                            <br />
+                                            选择微博平台扩大声量，头部结合中腰部博主多维度推广深度种草。KOL内容展示使用感受及使用前后对比细节图，突出产品细腻水乳质感，突出产品优质功效。
+                                        </p>
+                                        <p>
+                                            累计曝光量达&nbsp;
+                                            <span class="color-cc3366">
+                                                        <strong>1230万+</strong>
+                                                    </span>
+                                            <br />
+                                            互动量达
+                                            <span class="color-cc3366">
+                                                        <strong>4万+</strong>
+                                                    </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- TODO  -->
+                                        <img
+                                                src="static/pc/picture/hailan.png"
+                                                width="600"
+                                                height="588"
+                                                alt="海蓝之谜&如涵 | 针对不同产品线特点、产品的功能点对应内容产出"
+                                        />
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h2>联合利华&amp;如涵 | 新品上市，破冰国内市场</h2>
+                                        <p>
+                                            联合利华旗下新品VERVE霓裳洗衣液登陆中国市场，如涵为其独家策划社媒传播+引流导购营销方案，传播#越洗越新#去毛球黑科技#独特产品定位，助力VERVE完成从0知名度到高端洗护品牌的口碑、销量双增长。<br />
+                                        </p>
+                                        <p>
+                                            图文阅读量达&nbsp;<span class="color-cc3366"
+                                        ><strong>1030万</strong></span
+                                        ><br />
+                                            视频播放量达<span class="color-cc3366"
+                                        >&nbsp;<strong>830万次</strong></span
+                                        ><br />
+                                            直播观看量达<span class="color-cc3366"
+                                        >&nbsp;<strong>674万次</strong></span
+                                        ><br />
+                                            红人店铺上架3天售出超<span class="color-cc3366"
+                                        >&nbsp;<strong>14000件</strong></span
+                                        ><br />
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img
+                                                src="static/pc/picture/1-1z30513253x26.jpg"
+                                                width="600"
+                                                height="588"
+                                                alt="联合利华&amp;如涵 | 新品上市，破冰国内市场"
+                                        />
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h2>DPC&amp;如涵 | 品牌新品首发，大V社媒引爆</h2>
+                                        <p>
+                                            韩国彩妆品牌DPC进军国内市场，如涵美妆大V虫虫Chonny&amp;杨霞-Sunny全网首推新品豹纹气垫，以视频、图文、线下活动等多形式推广种草，微博曝光淘宝带货，成功完成新品冷启动，奠定品牌基础知名度。<br />
+                                        </p>
+                                        <p>
+                                            累计曝光量<span class="color-cc0066"
+                                        >&nbsp;<strong>1510万+</strong></span
+                                        ><br />
+                                            互动量
+                                            <span class="color-cc3366"
+                                            ><strong>1.5万+</strong></span
+                                            ><br />
+                                            带货数量近&nbsp;<span class="color-cc3366"
+                                        ><strong>3000件</strong></span
+                                        ><br />
+                                            ROI高达&nbsp;<span class="color-cc3366"
+                                        ><strong>1:2.2</strong></span
+                                        ><br />
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img
+                                                src="static/pc/picture/1-1z305134025161.jpg"
+                                                width="600"
+                                                height="588"
+                                                alt="DPC&amp;如涵 | 品牌新品首发，大V社媒引爆"
+                                        />
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h2>Olay&amp;如涵 | 年度内容营销</h2>
+                                        <p>
+                                            如涵根据Olay官方营销节奏定制推广计划，在情人节、女神节、年中大促、双十一等重要营销节点，20余位如涵美妆红人通过微博集中引爆品牌声势，完成站外导流站内转化的霸屏式品牌营销。
+                                        </p>
+                                        <p>
+                                            累计曝光量
+                                            <span class="color-cc3366"
+                                            ><strong>2200万+</strong></span
+                                            ><br />
+                                            播放量
+                                            <span class="color-cc3366"
+                                            ><strong>1550万+</strong></span
+                                            ><br />
+                                            互动量
+                                            <span class="color-cc3366"
+                                            ><strong>19万+</strong></span
+                                            ><br />
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img
+                                                src="static/pc/picture/img05.jpg"
+                                                width="600"
+                                                height="588"
+                                                alt="Olay&amp;如涵 | 年度内容营销"
+                                        />
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h2>宝洁&amp;如涵 | 当妮留香珠网红爆款打造</h2>
+                                        <p>
+                                            如涵与宝洁中国达成深度合作，旗下全矩阵高颜值KOL以&ldquo;护衣留香&rdquo;差异化定位，全网种草，通过生活方式展示，热力开启衣物奢华香氛新时代。<br />
+                                        </p>
+                                        <p>
+                                            累计曝光量达&nbsp;<span class="color-cc3366"
+                                        ><strong>1242万</strong></span
+                                        ><br />
+                                            互动量达<span class="color-cc3366"
+                                        >&nbsp;<strong>3万+</strong></span
+                                        ><br />
+                                            助力当妮成为淘宝衣物护理类<span
+                                                class="color-cc3366"
+                                        >&nbsp;<strong>TOP1</strong></span
+                                        ><br />
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img
+                                                src="static/pc/picture/1-1z305155203400.jpg"
+                                                width="600"
+                                                height="588"
+                                                alt="宝洁&amp;如涵 | 当妮留香珠网红爆款打造"
+                                        />
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h2>美宝莲&张大奕eve | 品牌联名，玩转品牌新营销</h2>
+                                        <p>
+                                            美宝莲携手第一网红张大奕eve推出玫瑰金小灯管定制系列3色联名款唇膏，红人的个性色彩与品牌风格完美融合，引发粉丝爆灯抢购。<br />
+                                        </p>
+                                        <p>
+                                            累计曝光量&nbsp;<span class="color-cc3366"
+                                        ><strong>620万+</strong></span
+                                        ><br />
+                                            线下直播观看人次<span class="color-cc3366"
+                                        >&nbsp;<strong>343万次</strong></span
+                                        ><br />
+                                            总互动量<span class="color-cc3366"
+                                        >&nbsp;<strong>14000+</strong></span
+                                        ><br />
+                                            联名款上线当天售出<span class="color-cc3366"
+                                        >&nbsp;<strong>2000+件</strong></span
+                                        ><br />
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img
+                                                src="static/pc/picture/eve.png"
+                                                width="600"
+                                                height="588"
+                                                alt="美宝莲&张大奕eve | 品牌联名，玩转品牌新营销"
+                                        />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--合作联系-->
+        <div class="module section contact-bg screen-full" id="contact">
+            <div class="table-layer">
+                <div class="inner contact">
+                    <h2 class="h2Ttl02">CONTACT US <span>合作联系</span></h2>
+                    <div class="row item">
+                        <div class="col-sm-6">
+                            <p>
+                                红人签约：zhuty@ruhnn.com<br />
+                                品牌合作：KOL@ruhnn.com<br />
+                                电商合作：huangxy@ruhnn.com<br />
+                                供应链合作：lilm@ruhnn.com<br />
+                                公关关系：media@ruhnn.com<br />
+                                如涵控股：杭州市九州路绿谷杭州2号楼11楼<br />
+                                如涵文化：杭州市江干区高德置地广场A楼中塔38F（广告、电商、轻店铺业务）
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <!--百度地图容器-->
+                            <div id="map" class="map">
+                                <iframe
+                                        src="{:url('pc/index/address')}"
+                                        height="340"
+                                        frameborder="0"
+                                ></iframe>
+                            </div>
+                            <!--百度地图容器-->
+                        </div>
+                    </div>
+                </div>
+                <div class="copyrght">
+                    <p>
+                        <a href="//www.beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
+                            浙ICP备14009183号-6
+                        </a>
+                    </p>
+                    <p>浙公网安备 33010402002421号</p>
+                    <p>
+                        Copyright © 2012-2020 如涵 版权所有
+                        <a style="padding-left: 10px" href="/about">关于我们</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="static/pc/js/layui.js"></script>
+<script src="static/pc/js/jquery.superslide.2.1.1.js"></script>
+<script src="static/pc/js/style.js"></script>
+<script src="static/pc/js/slick.js"></script>
+<script src="static/pc/js/jquery.nav.js"></script>
+<script src="static/pc/js/jquery.scrollto.js"></script>
+<script src="static/pc/js/index.js"></script>
+</body>
+</html>

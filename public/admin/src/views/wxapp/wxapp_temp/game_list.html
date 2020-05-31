@@ -1,0 +1,204 @@
+<script src="/static/layui/layui_exts/ace/ace.js"></script>
+<title>小程序列表</title>
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <table id="LAY-wxappGame-index-list" lay-filter="LAY-wxappGame-index-list"></table>
+            <script type="text/html" id="template_game_status">
+                {{#  if(d.type == 'type_one'){ }}
+                <button class="layui-btn layui-btn-normal layui-btn-xs">类型1</button>
+                {{# }else if(d.type == 'type_two'){  }}
+                <button class="layui-btn layui-btn-warm layui-btn-xs">类型2</button>
+                {{# }else if(d.type == 'type_three'){  }}
+                <button class="layui-btn layui-btn-danger layui-btn-xs">类型3</button>
+                {{# }else if(d.type == 'type_four'){  }}
+                <button class="layui-btn layui-btn-xs">类型4</button>
+                {{# }else if(d.type == 'type_five'){  }}
+                <button class="layui-btn layui-btn-danger layui-btn-xs">类型5</button>
+                {{# }else if(d.type == 'type_top'){  }}
+                <button class="layui-btn layui-btn-danger layui-btn-xs">置顶</button>
+                {{#  } else { }}
+                <button class="layui-btn layui-btn-normal layui-btn-xs">未知状态</button>
+                {{#  } }}
+            </script>
+            <script type="text/html" id="table-do-list">
+                <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
+            </script>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="news_list_toolbar">
+    <div class="layui-btn-container">
+        <button class="layui-btn layui-btn-sm" lay-event="add">添加游戏</button>
+    </div>
+</script>
+
+
+<script>
+    layui.use(['admin', 'table','form','layedit'], function(){
+        var $ = layui.$
+            ,admin = layui.admin
+            ,view = layui.view
+            ,table = layui.table
+            ,layedit = layui.layedit
+            ,form = layui.form;
+
+        var router = layui.router();
+        var wxapp_temp_id = router.search.wxapp_temp_id;
+
+        //资讯管理
+        table.render({
+            elem: '#LAY-wxappGame-index-list'
+            ,url: api_host+'/wxapp_game/game_list'
+            ,toolbar: '#news_list_toolbar'
+            ,cols: [[
+                {type: 'checkbox', fixed: 'left'}
+                ,{field: 's_id', width: 80, title: 'ID', sort: true}
+                ,{field: 'game_id', width: 80, title: '游戏ID', sort: true}
+                ,{field: 'game_name', title: '游戏名字', width: 200}
+                ,{field: 'game_weight', title: '权重', width: 200}
+                ,{field: 'game_status', title: '类型',templet:'#template_game_status',width: 100, sort: true,align:'center'}
+                ,{field: 'channel_id', title: '渠道ID', width: 200}
+                ,{field: 'create_time', title: '添加时间', width: 200}
+                ,{title: '操作', width: 250, align: 'center', toolbar: '#table-do-list'}
+            ]]
+            ,page: true
+            ,limit: 30
+            ,height: 'full-200'
+            ,where:{
+                token: layui.data('Admin').token,
+                wxapp_temp_id:wxapp_temp_id
+
+            }
+        });
+
+        //监听工具条
+        table.on('tool(LAY-wxappGame-index-list)', function(obj){
+            var data = obj.data;
+            if(obj.event === 'edit'){
+                admin.popup({
+                    title: '编辑模板'
+                    ,area: ['30%', '50%']
+                    ,id: 'LAY-news-edit'
+                    ,success: function(layero, index){
+                        view(this.id).render('wxapp/wxapp_temp/game_edit', data).done(function(){
+                            form.on('submit(LAY-wxapp-form-edit-submit)', function(data){
+                                var sessionData = layui.sessionData('ju6game');
+                                data.field.wxapp_temp_id = wxapp_temp_id;
+                                var field = data.field; //获取提交的字段
+                                admin.req({
+                                    url: api_host+'/wxapp_game/addGame/'
+                                    ,data: field
+                                    ,type: 'POST'
+                                    ,done: function(res){
+                                        if(res.code == 0){
+                                            layer.msg(res.msg, {
+                                                offset: '15px'
+                                                ,icon: 1
+                                                ,time: 1000
+                                            },function(){
+                                                layui.table.reload('LAY-wxappGame-index-list');
+                                                layer.close(index);
+                                            });
+                                        }else{
+                                            layer.msg(res.msg, {
+                                                offset: '15px'
+                                                ,icon: 2
+                                                ,time: 1000
+                                            });
+                                        }
+
+                                    }
+                                });
+                            });
+
+
+
+                        });
+                    }
+                });
+
+            } else if(obj.event === 'del'){
+                layer.confirm('确定删除此游戏？', function(index){
+
+                    admin.req({
+                        url: api_host+'/wxapp_game/delGame/'
+                        ,data: {s_id:data.s_id}
+                        ,type: 'POST'
+                        ,done: function(res){
+                            if(res.code == 0){
+                                layer.msg(res.msg, {
+                                    offset: '15px'
+                                    ,icon: 1
+                                    ,time: 1000
+                                },function(){
+                                    layui.table.reload('LAY-wxappGame-index-list');
+                                    layer.close(index);
+                                });
+                            }else{
+                                layer.msg(res.msg, {
+                                    offset: '15px'
+                                    ,icon: 2
+                                    ,time: 1000
+                                });
+                            }
+
+                        }
+                    });
+
+                    obj.del();
+                    layer.close(index);
+                });
+            }
+
+        });
+
+        table.on('toolbar(LAY-wxappGame-index-list)', function(obj){
+            if(obj.event === 'add'){
+                admin.popup({
+                    title: '添加游戏'
+                    ,area: ['30%', '50%']
+                    ,id: 'LAY-news-news-add'
+                    ,success: function(layero, index){
+                        view(this.id).render('wxapp/wxapp_temp/game_edit').done(function(){
+                            //监听提交
+                            form.on('submit(LAY-wxapp-form-edit-submit)', function(data){
+                                var sessionData = layui.sessionData('ju6game');
+                                data.field.wxapp_temp_id = wxapp_temp_id;
+                                var field = data.field; //获取提交的字段
+                                admin.req({
+                                    url: api_host+'/wxapp_game/addGame/'
+                                    ,data: field
+                                    ,type: 'POST'
+                                    ,done: function(res){
+                                        if(res.code == 0){
+                                            layer.msg(res.msg, {
+                                                offset: '15px'
+                                                ,icon: 1
+                                                ,time: 1000
+                                            },function(){
+                                                layui.table.reload('LAY-wxappGame-index-list');
+                                                layer.close(index);
+                                            });
+                                        }else{
+                                            layer.msg(res.msg, {
+                                                offset: '15px'
+                                                ,icon: 2
+                                                ,time: 1000
+                                            });
+                                        }
+
+                                    }
+                                });
+                            });
+                        });
+                    }
+                });
+            }
+        });
+
+
+    });
+
+</script>
